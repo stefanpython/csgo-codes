@@ -1,0 +1,27 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  width: 700px;
+  margin-bottom: -120px;
+}
+
+.mid-container {
+  display: flex;
+  align-items: center;
+}
+
+.left,
+.right {
+  border: none;
+  border-top: 1px solid rgb(219, 219, 219);
+  flex: 1;
+}
+
+.popular {
+  margin: 0 10px;
+}
