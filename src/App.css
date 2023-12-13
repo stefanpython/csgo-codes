@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 1700px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -7,7 +7,6 @@
 
 .title {
   width: 700px;
-  margin-bottom: -120px;
 }
 
 .mid-container {
@@ -22,6 +21,16 @@
   flex: 1;
 }
 
-.popular {
+.featured {
   margin: 0 10px;
 }
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+/* .box {
+  background-color: aliceblue;
+} */

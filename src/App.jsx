@@ -1,6 +1,11 @@
 import "./App.css";
 
 function App() {
+  // Handles button redirect
+  const handleButtonClick = (url) => {
+    window.location.href = url;
+  };
+
   return (
     <div className="app">
       <div className="title-container">
@@ -14,7 +19,7 @@ function App() {
 
       <div className="mid-container">
         <hr className="left" />
-        <div className="popular">Popular</div>
+        <div className="featured">FEATURED</div>
         <hr className="right" />
       </div>
 
