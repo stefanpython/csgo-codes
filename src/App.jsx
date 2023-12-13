@@ -28,11 +28,53 @@ function App() {
           <div className="first-rectangle">
             <img className="empire-logo logo" src="./empire.svg" alt="empire" />
           </div>
+
+          <div className="small-rectangles">
+            <div className="small-box">
+              <img src="" alt="" />
+              Routette
+            </div>
+
+            <div className="small-box">
+              <img src="" alt="" />
+              Crash
+            </div>
+
+            <div className="small-box">
+              <img src="" alt="" />
+              Coinflip
+            </div>
+          </div>
+
+          <div className="dotcode-btn">
+            <button>+ CSGODOTCODE</button>
+          </div>
         </div>
 
         <div className="box">
           <div className="first-rectangle">
             <img className="roll-logo logo" src="./roll.svg" alt="roll" />
+          </div>
+
+          <div className="small-rectangles">
+            <div className="small-box">
+              <img src="" alt="" />
+              Roulette
+            </div>
+
+            <div className="small-box">
+              <img src="" alt="" />
+              Crash
+            </div>
+
+            <div className="small-box">
+              <img src="" alt="" />
+              Coinflip
+            </div>
+          </div>
+
+          <div className="dotcode-btn">
+            <button>+ CSGODOTCODE</button>
           </div>
         </div>
 
@@ -44,11 +86,23 @@ function App() {
               alt="hellcase"
             />
           </div>
+
+          <div className="small-rectangles"></div>
+
+          <div className="dotcode-btn">
+            <button>+ CSGODOTCODE</button>
+          </div>
         </div>
 
         <div className="box">
           <div className="first-rectangle">
             <img className="daddy-logo" src="./daddy3.png" alt="daddy" />
+          </div>
+
+          <div className="small-rectangles"></div>
+
+          <div className="dotcode-btn">
+            <button>+ CSGODOTCODE</button>
           </div>
         </div>
       </div>

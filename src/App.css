@@ -50,6 +50,7 @@
 .box {
   background-color: rgba(108, 115, 121, 0.61);
   min-height: 400px;
+  max-width: 400px;
 }
 
 .first-rectangle {
@@ -76,4 +77,28 @@
 .hell-logo {
   height: 190px;
   margin-top: -45px;
+}
+
+/* Small rectangle */
+
+.small-rectangles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+  gap: 10px;
+  margin-top: 50px;
+  padding: 0 40px;
+}
+
+.small-box {
+  border: 1px solid red;
+}
+
+.dotcode-btn {
+  margin-top: 20px;
+}
+
+.dotcode-btn button {
+  padding: 15px 21px;
+  font-size: 30px;
+  font-weight: 900;
 }
