@@ -5,6 +5,13 @@
   text-align: center;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
 .title-container {
   margin-bottom: -45px;
   margin-top: -90px;
@@ -12,11 +19,34 @@
 
 .title {
   max-width: 800px;
+  margin-left: -20px;
 }
 
 .btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 170px;
   margin-top: -170px;
+  gap: 50px;
+}
+
+.btn-container h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btn-container button {
+  background-color: #833535;
+  padding: 0 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.present-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Mid container style  */
@@ -25,6 +55,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 60px;
+  padding: 0 150px !important;
 }
 
 .left,
@@ -49,13 +80,16 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   margin-top: 10px;
-  gap: 40px;
+  gap: 50px;
+  margin: 0 auto;
+  max-width: 1600px;
 }
 
 .box {
   background-color: rgba(108, 115, 121, 0.61);
   min-height: 400px;
   max-width: 400px;
+  min-width: 385px;
 }
 
 .first-rectangle {

@@ -1,4 +1,5 @@
 import "./App.css";
+import "./Responsievness.css";
 
 function App() {
   // Handles button redirect
@@ -13,14 +14,25 @@ function App() {
       </div>
 
       <div className="btn-container">
-        <button>GIVEAWAYS</button>
-        <button>STEAM GROUP</button>
+        <button className="present-btn">
+          <img className="present-img" src="./present.png" alt="present" />
+          <h1>GIVEAWAYS</h1>
+        </button>
+        <button className="steam-btn">
+          <h1>STEAM GROUP</h1>
+        </button>
+      </div>
+
+      <div className="searchbar">
+        <input className="search" type="text" name="" id="" />
       </div>
 
       <div className="mid-container">
         <hr className="left" />
         <img className="star-icon" src="./star.png" alt="star" />
-        <div className="featured">FEATURED</div>
+        <div className="featured">
+          <h1>POPULAR</h1>
+        </div>
         <hr className="right" />
       </div>
 

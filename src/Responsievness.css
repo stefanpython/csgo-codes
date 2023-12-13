@@ -1,0 +1,82 @@
+/* Mobile responsiveness   */
+@media (max-width: 1660px) {
+  .box-container {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .box-container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 890px) {
+  .title {
+    max-width: 720px;
+  }
+
+  .btn-container {
+    margin-top: -100px;
+  }
+
+  .box-container {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 815px) {
+  .title {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 715px) {
+  .title {
+    max-width: 400px;
+  }
+  .mid-container {
+    padding: 0 !important;
+  }
+
+  .btn-container {
+    margin-top: -40px;
+    margin-left: -20px;
+    gap: 20px;
+  }
+
+  .btn-container h1 {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .btn-container button {
+    min-width: 170px;
+  }
+
+  .steam-btn {
+    height: 41px;
+  }
+}
+
+@media (max-width: 450px) {
+  .box {
+    margin-left: -20px;
+  }
+
+  .btn-container {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 390px) {
+  .btn-container {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 390px) {
+  .mid-container {
+    margin-right: -50px;
+  }
+}
