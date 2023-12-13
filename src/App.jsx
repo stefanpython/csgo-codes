@@ -12,7 +12,7 @@ function App() {
         <img className="title" src="./title.png" alt="title" />
       </div>
 
-      <div className="two-btn-container">
+      <div className="btn-container">
         <button>GIVEAWAYS</button>
         <button>STEAM GROUP</button>
       </div>
@@ -24,13 +24,33 @@ function App() {
       </div>
 
       <div className="box-container">
-        <div className="box">one</div>
+        <div className="box">
+          <div className="first-rectangle">
+            <img className="empire-logo logo" src="./empire.svg" alt="empire" />
+          </div>
+        </div>
 
-        <div className="box">two</div>
+        <div className="box">
+          <div className="first-rectangle">
+            <img className="roll-logo logo" src="./roll.svg" alt="roll" />
+          </div>
+        </div>
 
-        <div className="box">three</div>
+        <div className="box">
+          <div className="first-rectangle">
+            <img
+              className="hell-logo logo"
+              src="./hellcase.svg"
+              alt="hellcase"
+            />
+          </div>
+        </div>
 
-        <div className="box">four</div>
+        <div className="box">
+          <div className="first-rectangle">
+            <img className="daddy-logo" src="./daddy3.png" alt="daddy" />
+          </div>
+        </div>
       </div>
     </div>
   );

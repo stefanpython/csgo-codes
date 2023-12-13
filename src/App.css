@@ -5,13 +5,26 @@
   text-align: center;
 }
 
-.title {
-  width: 700px;
+.title-container {
+  margin-bottom: -45px;
+  margin-top: -90px;
 }
+
+.title {
+  max-width: 800px;
+}
+
+.btn-container {
+  margin-bottom: 170px;
+  margin-top: -170px;
+}
+
+/* Mid container style  */
 
 .mid-container {
   display: flex;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .left,
@@ -22,15 +35,45 @@
 }
 
 .featured {
-  margin: 0 10px;
+  margin: 0 20px;
 }
+
+/* Box style */
 
 .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin-top: 10px;
+  gap: 40px;
 }
 
-/* .box {
-  background-color: aliceblue;
-} */
+.box {
+  background-color: rgba(108, 115, 121, 0.61);
+  min-height: 400px;
+}
+
+.first-rectangle {
+  background-color: rgb(59, 57, 57);
+  height: 110px;
+  margin-top: 75px;
+}
+
+.logo {
+  height: 170px;
+  margin-top: -37px;
+}
+
+.daddy-logo {
+  height: 140px;
+  margin-top: -15px;
+}
+
+.empire-logo {
+  height: 190px;
+  margin-top: -40px;
+}
+
+.hell-logo {
+  height: 190px;
+  margin-top: -45px;
+}
