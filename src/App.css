@@ -38,6 +38,11 @@
   margin: 0 20px;
 }
 
+.star-icon {
+  height: 50px;
+  margin-left: 18px;
+}
+
 /* Box style */
 
 .box-container {
@@ -56,7 +61,7 @@
 .first-rectangle {
   background-color: rgb(59, 57, 57);
   height: 110px;
-  margin-top: 75px;
+  margin-top: 90px;
 }
 
 .logo {
@@ -79,26 +84,96 @@
   margin-top: -45px;
 }
 
+/* First part of each box style  */
+
+.right-title {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  margin-top: -70px;
+  margin-bottom: -60px;
+}
+
+.right-title p {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* $ 0.50 rectangle style */
+
+.rectangle-container {
+  position: relative;
+  width: 100px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+}
+
+.rectangle {
+  width: 75%;
+  height: 75%;
+  background-color: #3498db; /* Adjust color as needed */
+  transform: translateX(-25%);
+  margin-top: 10px;
+}
+
+.rectangle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  top: 100%;
+  transform: translateX(-160%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 1px 19px;
+  border-color: #3498db transparent transparent transparent;
+}
+
+.rectangle p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 /* Small rectangle */
 
 .small-rectangles {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
   gap: 10px;
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 0 40px;
 }
 
 .small-box {
-  border: 1px solid red;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: rgb(63, 62, 62);
 }
+
+.small-box h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.small-box img {
+  width: 40px;
+  margin-bottom: -5px;
+}
+
+/* CSGODOT buttons  */
 
 .dotcode-btn {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .dotcode-btn button {
   padding: 15px 21px;
   font-size: 30px;
   font-weight: 900;
+}
+
+.right-btn {
+  margin-top: 105px;
 }
