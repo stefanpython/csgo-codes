@@ -82,19 +82,23 @@
   .star-icon {
     height: 35px;
   }
+
+  .title {
+    margin-left: -30px;
+  }
 }
 
 @media (max-width: 390px) {
   .btn-container {
-    margin-left: 15px !important;
+    margin-left: 5px !important;
   }
 
   .mid-container {
-    margin-right: -20px;
+    margin-right: -10px;
   }
 
   .title {
-    width: 385px;
+    width: 375px;
     margin-left: -28px;
   }
   .box {
@@ -117,6 +121,20 @@
 
 @media (max-width: 375px) {
   .btn-container {
-    margin-left: 45px !important;
+    margin-left: 25px !important;
+  }
+
+  .searchbar-container {
+    margin-left: -10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn-container {
+    margin-left: 35px !important;
+  }
+
+  .searchbar-container {
+    margin-left: -40px;
   }
 }

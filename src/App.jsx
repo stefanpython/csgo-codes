@@ -112,7 +112,7 @@ function App() {
 
       <div className="mid-container">
         <hr className="left" />
-        <img className="star-icon" src="./star.png" alt="star" />
+        <img className="star-icon" src="./star2.png" alt="star" />
         <div className="featured">
           <h1>FEATURED</h1>
         </div>
