@@ -65,18 +65,51 @@
   }
 
   .btn-container {
-    margin-left: 25px;
+    margin-left: 5px;
+  }
+
+  .mid-container h1 {
+    font-size: 24px;
+  }
+
+  .star-icon {
+    height: 35px;
   }
 }
 
 @media (max-width: 390px) {
   .btn-container {
-    margin-left: 60px;
+    margin-left: 15px !important;
+  }
+
+  .mid-container {
+    margin-right: -20px;
+  }
+
+  .title {
+    width: 385px;
+    margin-left: -28px;
+  }
+  .box {
+    min-width: 165px !important;
+    width: 360px;
+  }
+
+  .logo {
+    width: 360px;
+  }
+
+  .small-box h1 {
+    font-size: 15px;
+  }
+
+  .btn-container {
+    margin-left: 50px;
   }
 }
 
-@media (max-width: 390px) {
-  .mid-container {
-    margin-right: -50px;
+@media (max-width: 375px) {
+  .btn-container {
+    margin-left: 45px !important;
   }
 }

@@ -55,6 +55,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 60px;
+  margin-top: -120px;
   padding: 0 150px !important;
 }
 
@@ -210,4 +211,25 @@
 
 .right-btn {
   margin-top: 105px;
+}
+
+/* Searchbar style */
+
+.search {
+  background-color: rgb(224, 221, 221);
+  width: 240px;
+  height: 25px;
+  border: none;
+  border-radius: 2px;
+  color: black;
+}
+
+.searchbar-container {
+  margin-bottom: 40px;
+  margin-top: -50px;
+}
+
+.filter-search {
+  display: flex;
+  justify-content: center;
 }

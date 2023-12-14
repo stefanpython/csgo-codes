@@ -1,10 +1,30 @@
 import "./App.css";
 import "./Responsievness.css";
+import "./Dropdown.css";
 
 function App() {
   // Handles button redirect
   const handleButtonClick = (url) => {
     window.location.href = url;
+  };
+
+  // Dropdown button
+  function toggleDropdown() {
+    var dropdown = document.getElementById("gameDropdown");
+    dropdown.classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches(".dropdown-btn")) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    }
   };
 
   return (
@@ -23,10 +43,6 @@ function App() {
         </button>
       </div>
 
-      <div className="searchbar">
-        <input className="search" type="text" name="" id="" />
-      </div>
-
       <div className="mid-container">
         <hr className="left" />
         <img className="star-icon" src="./star.png" alt="star" />
@@ -34,6 +50,29 @@ function App() {
           <h1>POPULAR</h1>
         </div>
         <hr className="right" />
+      </div>
+
+      <div className="filter-search">
+        <div className="searchbar-container">
+          <input
+            className="search"
+            type="text"
+            name=""
+            id=""
+            placeholder="Type to filter"
+          />
+
+          <div className="dropdown">
+            <button className="dropdown-btn" onClick={() => toggleDropdown()}>
+              Sort by
+            </button>
+            <div className="dropdown-content" id="gameDropdown">
+              <a href="#">Roulette</a>
+              <a href="#">Crash</a>
+              <a href="#">Coinflip</a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="box-container">
@@ -159,7 +198,7 @@ function App() {
             <p>DADDYSKINS</p>
           </div>
           <div className="first-rectangle">
-            <img className="daddy-logo" src="./daddy3.png" alt="daddy" />
+            <img className="daddy-logo logo" src="./daddy3.png" alt="daddy" />
           </div>
 
           <div className="small-rectangles"></div>
