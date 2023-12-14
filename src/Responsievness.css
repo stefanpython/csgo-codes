@@ -59,6 +59,13 @@
   }
 }
 
+@media (max-width: 550px) {
+  .dropdown-content {
+    margin-left: -104.3px;
+    margin-top: 2px;
+  }
+}
+
 @media (max-width: 450px) {
   .box {
     margin-left: -20px;

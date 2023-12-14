@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import "./Responsievness.css";
 import "./Dropdown.css";
@@ -7,14 +7,22 @@ function App() {
   const [searchInput, setSearchInput] = useState("");
   const [selectedOption, setSelectedOption] = useState(null);
 
+  // Handles button redirect
+  const handleButtonClick = (url) => {
+    window.location.href = url;
+  };
+
+  // Handle input search value
   const handleInputChange = (event) => {
     setSearchInput(event.target.value);
   };
 
+  // Handle dropdown button options
   const handleDropdownClick = (option) => {
     setSelectedOption(option);
   };
 
+  // Fiter search by input
   const filteredBoxes = (boxName) => {
     const lowerCaseSearch = searchInput.toLowerCase();
     return (
@@ -23,11 +31,13 @@ function App() {
     );
   };
 
+  // Handle dropdown button
   const toggleDropdown = () => {
     const dropdown = document.getElementById("gameDropdown");
     dropdown.classList.toggle("show");
   };
 
+  // Hide dropdown if user clicks outside it`s options
   window.onclick = function (event) {
     if (!event.target.matches(".dropdown-btn")) {
       const dropdowns = document.getElementsByClassName("dropdown-content");
@@ -47,11 +57,21 @@ function App() {
       </div>
 
       <div className="btn-container">
-        <button className="present-btn">
+        <button
+          className="present-btn"
+          onClick={
+            () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
+          }
+        >
           <img className="present-img" src="./present.png" alt="present" />
           <h1>GIVEAWAYS</h1>
         </button>
-        <button className="steam-btn">
+        <button
+          className="steam-btn"
+          onClick={
+            () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
+          }
+        >
           <h1>STEAM GROUP</h1>
         </button>
       </div>
@@ -61,9 +81,9 @@ function App() {
           <input
             className="search"
             type="text"
-            name=""
-            id=""
-            placeholder="Type to filter"
+            name="search"
+            id="searc"
+            placeholder="Type to Filter..."
             value={searchInput}
             onChange={handleInputChange}
           />
@@ -74,16 +94,16 @@ function App() {
             </button>
             <div className="dropdown-content" id="gameDropdown">
               <a href="#" onClick={() => handleDropdownClick("")}>
-                Show All
+                SHOW ALL
               </a>
               <a href="#" onClick={() => handleDropdownClick("ROULETTE")}>
-                Roulette
+                ROULETTE
               </a>
               <a href="#" onClick={() => handleDropdownClick("CRASH")}>
-                Crash
+                CRASH
               </a>
               <a href="#" onClick={() => handleDropdownClick("COINFLIP")}>
-                Coinflip
+                COINFLIP
               </a>
             </div>
           </div>
@@ -145,7 +165,13 @@ function App() {
             </div>
 
             <div className="dotcode-btn">
-              <button>+ CSGODOTCODE</button>
+              <button
+                onClick={
+                  () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
+                }
+              >
+                + CSGODOTCODE
+              </button>
             </div>
           </div>
         )}
@@ -189,7 +215,13 @@ function App() {
             </div>
 
             <div className="dotcode-btn">
-              <button>+ CSGODOTCODE</button>
+              <button
+                onClick={
+                  () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
+                }
+              >
+                + CSGODOTCODE
+              </button>
             </div>
           </div>
         )}
@@ -216,7 +248,13 @@ function App() {
             <div className="small-rectangles"></div>
 
             <div className="dotcode-btn right-btn">
-              <button>+ CSGODOTCODE</button>
+              <button
+                onClick={
+                  () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
+                }
+              >
+                + CSGODOTCODE
+              </button>
             </div>
           </div>
         )}
@@ -239,7 +277,13 @@ function App() {
             <div className="small-rectangles"></div>
 
             <div className="dotcode-btn right-btn">
-              <button>+ CSGODOTCODE</button>
+              <button
+                onClick={
+                  () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
+                }
+              >
+                + CSGODOTCODE
+              </button>
             </div>
           </div>
         )}

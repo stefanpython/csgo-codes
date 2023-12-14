@@ -39,3 +39,7 @@
 button:hover {
   cursor: pointer;
 }
+
+#gameDropdown a:first-child {
+  color: #007bff;
+}

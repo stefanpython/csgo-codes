@@ -54,7 +54,7 @@
 .mid-container {
   display: flex;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   margin-top: -120px;
   padding: 0 150px !important;
 }
@@ -87,14 +87,16 @@
 }
 
 .box {
-  background-color: rgba(108, 115, 121, 0.61);
+  background-color: #2c2b32c5;
   min-height: 400px;
   max-width: 400px;
   min-width: 385px;
+  box-shadow: 0px 6px 10px 0px rgb(20, 20, 20);
+  border-radius: 6px;
 }
 
 .first-rectangle {
-  background-color: rgb(59, 57, 57);
+  background-color: #222127;
   height: 110px;
   margin-top: 90px;
 }
@@ -138,30 +140,31 @@
 
 .rectangle-container {
   position: relative;
-  width: 100px; /* Adjust width as needed */
-  height: 40px; /* Adjust height as needed */
+  width: 100px;
+  height: 40px;
 }
 
 .rectangle {
   width: 75%;
   height: 75%;
-  background-color: #3498db; /* Adjust color as needed */
+  background-color: #833535;
   transform: translateX(-25%);
   margin-top: 10px;
+  border-radius: 3px;
 }
 
 .rectangle::before {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 40%;
-  top: 100%;
+  left: 39.8%;
+  top: 90%;
   transform: translateX(-160%);
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 20px 0 1px 19px;
-  border-color: #3498db transparent transparent transparent;
+  border-color: #833535 transparent transparent transparent;
 }
 
 .rectangle p {
@@ -183,7 +186,8 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  background-color: rgb(63, 62, 62);
+  background-color: #2d2c33;
+  box-shadow: 2px 4px 6px 0px rgb(14, 14, 14);
 }
 
 .small-box h1 {
@@ -207,6 +211,10 @@
   padding: 15px 21px;
   font-size: 30px;
   font-weight: 900;
+  background-color: #833535;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 6px 10px 0px rgb(20, 20, 20);
 }
 
 .right-btn {
