@@ -5,14 +5,22 @@ import "./Dropdown.css";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
+  const [selectedOption, setSelectedOption] = useState(null);
 
   const handleInputChange = (event) => {
     setSearchInput(event.target.value);
   };
 
+  const handleDropdownClick = (option) => {
+    setSelectedOption(option);
+  };
+
   const filteredBoxes = (boxName) => {
     const lowerCaseSearch = searchInput.toLowerCase();
-    return boxName.toLowerCase().includes(lowerCaseSearch);
+    return (
+      boxName.toLowerCase().includes(lowerCaseSearch) &&
+      (selectedOption ? boxName.includes(selectedOption) : true)
+    );
   };
 
   const toggleDropdown = () => {
@@ -65,9 +73,18 @@ function App() {
               Sort by
             </button>
             <div className="dropdown-content" id="gameDropdown">
-              <a href="#">Roulette</a>
-              <a href="#">Crash</a>
-              <a href="#">Coinflip</a>
+              <a href="#" onClick={() => handleDropdownClick("")}>
+                Show All
+              </a>
+              <a href="#" onClick={() => handleDropdownClick("ROULETTE")}>
+                Roulette
+              </a>
+              <a href="#" onClick={() => handleDropdownClick("CRASH")}>
+                Crash
+              </a>
+              <a href="#" onClick={() => handleDropdownClick("COINFLIP")}>
+                Coinflip
+              </a>
             </div>
           </div>
         </div>
@@ -77,7 +94,7 @@ function App() {
         <hr className="left" />
         <img className="star-icon" src="./star.png" alt="star" />
         <div className="featured">
-          <h1>POPULAR</h1>
+          <h1>FEATURED</h1>
         </div>
         <hr className="right" />
       </div>
