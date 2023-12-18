@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 170px;
-  margin-top: -170px;
+  margin-top: -130px;
   gap: 50px;
 }
 
@@ -246,22 +246,42 @@
 /* Searchbar style */
 
 .search {
-  background-color: rgb(224, 221, 221);
   width: 240px;
   height: 25px;
   border: none;
   border-radius: 2px;
   color: black;
+  background-color: rgb(73, 73, 73);
+  color: white;
 }
 
 .searchbar-container {
-  margin-bottom: 40px;
   margin-top: -50px;
 }
 
+.dropdown {
+  margin-top: -50px;
+}
+
+.dropdown-btn {
+  margin-left: -255px;
+}
+
+.dropdown-content {
+  margin-left: -255px;
+}
+
 .filter-search {
-  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
   margin-top: -70px;
+  z-index: 1000;
+}
+
+.search {
+  margin-right: -445px;
 }
 
 /* Other box style  */

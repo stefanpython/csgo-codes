@@ -25,6 +25,12 @@
   }
 }
 
+@media (max-width: 1040px) {
+  .filter-search {
+    margin-bottom: 100px;
+  }
+}
+
 @media (max-width: 815px) {
   .title {
     max-width: 620px;

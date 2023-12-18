@@ -87,44 +87,46 @@ function App() {
             value={searchInput}
             onChange={handleInputChange}
           />
+        </div>
 
-          <div className="dropdown">
-            <button className="dropdown-btn" onClick={() => toggleDropdown()}>
-              Sort by
-            </button>
-            <div className="dropdown-content" id="gameDropdown">
-              <a href="#" onClick={() => handleDropdownClick("")}>
-                SHOW ALL
-              </a>
-              <a href="#" onClick={() => handleDropdownClick("ROULETTE")}>
-                ROULETTE
-              </a>
-              <a href="#" onClick={() => handleDropdownClick("CRASH")}>
-                CRASH
-              </a>
-              <a href="#" onClick={() => handleDropdownClick("COINFLIP")}>
-                COINFLIP
-              </a>
-            </div>
+        <div className="dropdown">
+          <button className="dropdown-btn" onClick={() => toggleDropdown()}>
+            Sort by
+          </button>
+          <div className="dropdown-content" id="gameDropdown">
+            <a href="#" onClick={() => handleDropdownClick("")}>
+              SHOW ALL
+            </a>
+            <a href="#" onClick={() => handleDropdownClick("ROULETTE")}>
+              ROULETTE
+            </a>
+            <a href="#" onClick={() => handleDropdownClick("CRASH")}>
+              CRASH
+            </a>
+            <a href="#" onClick={() => handleDropdownClick("COINFLIP")}>
+              COINFLIP
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="mid-container">
-        <hr className="left" />
-        <img className="star-icon" src="./star2.png" alt="star" />
-        <div className="featured">
-          <h1>FEATURED</h1>
+      <div className="lines-container">
+        <div className="mid-container">
+          <hr className="left" />
+          <img className="star-icon" src="./star2.png" alt="star" />
+          <div className="featured">
+            <h1>FEATURED</h1>
+          </div>
+          <hr className="right" />
         </div>
-        <hr className="right" />
-      </div>
 
-      <div className="mid-container second-mid">
-        <hr className="left" />
-        <div className="all-sites">
-          <h1>ALL SITES</h1>
+        <div className="mid-container second-mid">
+          <hr className="left" />
+          <div className="all-sites">
+            <h1>ALL SITES</h1>
+          </div>
+          <hr className="right" />
         </div>
-        <hr className="right" />
       </div>
 
       <div className="box-container">
@@ -234,6 +236,12 @@ function App() {
           </div>
         )}
 
+        {/* ADD ALL SEARCH NAMES INSIDE THE QUOTES IN filteredBoxes("").
+        For example if you want the panel to be searched only by roulette,
+        crash, hellcase - Add these names here with space between words like so:
+
+        filteredBoxes("ROULETTE CRASH HELLCASE")
+        */}
         {filteredBoxes("HELLCASE") && (
           <div className="box">
             <div class="rectangle-container">
@@ -267,6 +275,12 @@ function App() {
           </div>
         )}
 
+        {/* ADD ALL SEARCH NAMES INSIDE THE QUOTES IN filteredBoxes("").
+        For example if you want the panel to be searched only by roulette,
+        crash, hellcase - Add these names here with space between words like so:
+
+        filteredBoxes("ROULETTE CRASH HELLCASE")
+        */}
         {filteredBoxes("DADDYSKINS") && (
           <div className="box">
             <div class="rectangle-container">
@@ -296,13 +310,19 @@ function App() {
           </div>
         )}
 
-        {/* The other 4 panels */}
+        {/* ------------------ The other 4 panels ------------------- */}
 
-        {filteredBoxes("DADDYSKINS") && (
+        {/* ADD ALL SEARCH NAMES INSIDE THE QUOTES IN filteredBoxes("").
+        For example if you want the panel to be searched only by roulette,
+        crash, hellcase - Add these names here with space between words like so:
+
+        filteredBoxes("ROULETTE CRASH HELLCASE")
+        */}
+        {filteredBoxes(">>> ADD ALL SEARCH NAMES HERE <<<") && (
           <div className="box other-box">
             <div class="rectangle-container">
               <div class="rectangle">
-                <p>$ HERE</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
+                <p>$ COST</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
               </div>
             </div>
 
@@ -316,6 +336,12 @@ function App() {
             </div>
 
             <div className="small-rectangles other-rectangle">
+              {/* 
+              TO ADD, REMOVE ROULETTE, CRASH, COINFLIP, YOU CAN REMOVE
+              ANY OR ALL OF THE div className="small-box" from start to end:
+               */}
+
+              {/* START */}
               <div className="small-box">
                 <div className="small-img">
                   <img src="./roulette.png" alt="roulette" />
@@ -323,20 +349,25 @@ function App() {
 
                 <h1>ROULETTE</h1>
               </div>
+              {/* END */}
 
+              {/* START */}
               <div className="small-box">
                 <div className="small-img">
                   <img src="./crash.png" alt="crash" />
                 </div>
                 <h1>CRASH</h1>
               </div>
+              {/* END */}
 
+              {/* START */}
               <div className="small-box">
                 <div className="small-img">
                   <img src="./coin.png" alt="coin" />
                 </div>
                 <h1>COINFLIP</h1>
               </div>
+              {/* END */}
             </div>
 
             <div className="dotcode-btn other-btn">
@@ -351,11 +382,17 @@ function App() {
           </div>
         )}
 
-        {filteredBoxes("DADDYSKINS") && (
+        {/* ADD ALL SEARCH NAMES INSIDE THE QUOTES IN filteredBoxes("").
+        For example if you want the panel to be searched only by roulette,
+        crash, hellcase - Add these names here with space between words like so:
+
+        filteredBoxes("ROULETTE CRASH HELLCASE")
+        */}
+        {filteredBoxes(">>> ADD ALL SEARCH NAMES HERE <<<") && (
           <div className="box other-box">
             <div class="rectangle-container">
               <div class="rectangle">
-                <p>$ HERE</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
+                <p>$ COST</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
               </div>
             </div>
 
@@ -369,6 +406,12 @@ function App() {
             </div>
 
             <div className="small-rectangles other-rectangle">
+              {/* 
+              TO ADD, REMOVE ROULETTE, CRASH, COINFLIP, YOU CAN REMOVE
+              ANY OR ALL OF THE div className="small-box" from start to end:
+               */}
+
+              {/* START */}
               <div className="small-box">
                 <div className="small-img">
                   <img src="./roulette.png" alt="roulette" />
@@ -376,20 +419,16 @@ function App() {
 
                 <h1>ROULETTE</h1>
               </div>
+              {/* END */}
 
-              <div className="small-box">
-                <div className="small-img">
-                  <img src="./crash.png" alt="crash" />
-                </div>
-                <h1>CRASH</h1>
-              </div>
-
+              {/* START */}
               <div className="small-box">
                 <div className="small-img">
                   <img src="./coin.png" alt="coin" />
                 </div>
                 <h1>COINFLIP</h1>
               </div>
+              {/* END */}
             </div>
 
             <div className="dotcode-btn other-btn">
@@ -404,11 +443,17 @@ function App() {
           </div>
         )}
 
-        {filteredBoxes("DADDYSKINS") && (
+        {/* ADD ALL SEARCH NAMES INSIDE THE QUOTES IN filteredBoxes("").
+        For example if you want the panel to be searched only by roulette,
+        crash, hellcase - Add these names here with space between words like so:
+
+        filteredBoxes("ROULETTE CRASH HELLCASE")
+        */}
+        {filteredBoxes(">>> ADD ALL SEARCH NAMES HERE <<<") && (
           <div className="box other-box">
             <div class="rectangle-container">
               <div class="rectangle">
-                <p>$ HERE</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
+                <p>$ COST</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
               </div>
             </div>
 
@@ -422,6 +467,12 @@ function App() {
             </div>
 
             <div className="small-rectangles other-rectangle">
+              {/* 
+              TO ADD, REMOVE ROULETTE, CRASH, COINFLIP, YOU CAN REMOVE
+              ANY OR ALL OF THE div className="small-box" from start to end:
+               */}
+
+              {/* START */}
               <div className="small-box">
                 <div className="small-img">
                   <img src="./roulette.png" alt="roulette" />
@@ -429,20 +480,7 @@ function App() {
 
                 <h1>ROULETTE</h1>
               </div>
-
-              <div className="small-box">
-                <div className="small-img">
-                  <img src="./crash.png" alt="crash" />
-                </div>
-                <h1>CRASH</h1>
-              </div>
-
-              <div className="small-box">
-                <div className="small-img">
-                  <img src="./coin.png" alt="coin" />
-                </div>
-                <h1>COINFLIP</h1>
-              </div>
+              {/* END */}
             </div>
 
             <div className="dotcode-btn other-btn">
@@ -457,11 +495,17 @@ function App() {
           </div>
         )}
 
-        {filteredBoxes("DADDYSKINS") && (
+        {/* ADD ALL SEARCH NAMES INSIDE THE QUOTES IN filteredBoxes("").
+        For example if you want the panel to be searched only by roulette,
+        crash, hellcase - Add these names here with space between words like so:
+
+        filteredBoxes("ROULETTE CRASH HELLCASE")
+        */}
+        {filteredBoxes(">>> ADD ALL SEARCH NAMES HERE <<<") && (
           <div className="box other-box">
             <div class="rectangle-container">
               <div class="rectangle">
-                <p>$ HERE</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
+                <p>$ COST</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
               </div>
             </div>
 
@@ -475,6 +519,12 @@ function App() {
             </div>
 
             <div className="small-rectangles other-rectangle">
+              {/* 
+              TO ADD, REMOVE ROULETTE, CRASH, COINFLIP, YOU CAN REMOVE
+              ANY OR ALL OF THE div className="small-box" from start to end:
+               */}
+
+              {/* START */}
               <div className="small-box">
                 <div className="small-img">
                   <img src="./roulette.png" alt="roulette" />
@@ -482,20 +532,25 @@ function App() {
 
                 <h1>ROULETTE</h1>
               </div>
+              {/* END */}
 
+              {/* START */}
               <div className="small-box">
                 <div className="small-img">
                   <img src="./crash.png" alt="crash" />
                 </div>
                 <h1>CRASH</h1>
               </div>
+              {/* END */}
 
+              {/* START */}
               <div className="small-box">
                 <div className="small-img">
                   <img src="./coin.png" alt="coin" />
                 </div>
                 <h1>COINFLIP</h1>
               </div>
+              {/* END */}
             </div>
 
             <div className="dotcode-btn other-btn">

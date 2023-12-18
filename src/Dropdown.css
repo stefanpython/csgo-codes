@@ -1,10 +1,5 @@
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
 .dropdown-btn {
-  background-color: #2376ad;
+  background-color: #833535;
   color: #fff;
   padding: 6.86px 7px;
   border: none;
@@ -41,5 +36,5 @@ button:hover {
 }
 
 #gameDropdown a:first-child {
-  color: #007bff;
+  color: #833535;
 }
