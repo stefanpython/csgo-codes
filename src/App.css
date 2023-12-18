@@ -117,8 +117,13 @@
 }
 
 .logo {
-  height: 170px;
+  height: 175px;
   margin-top: -37px;
+}
+
+.roll-logo {
+  height: 160px;
+  margin-top: -30px;
 }
 
 .daddy-logo {
@@ -203,6 +208,7 @@
   align-items: center;
   background-color: #2d2c33;
   box-shadow: 2px 4px 6px 0px rgb(14, 14, 14);
+  height: 35px;
 }
 
 .small-box h1 {
@@ -212,7 +218,8 @@
 
 .small-box img {
   width: 40px;
-  margin-bottom: -5px;
+  margin-bottom: -7px;
+  margin-left: -2px;
 }
 
 /* CSGODOT buttons  */
@@ -265,4 +272,8 @@
 
 .other-btn {
   margin-top: 15px;
+}
+
+.other-rectangle {
+  height: 85px;
 }

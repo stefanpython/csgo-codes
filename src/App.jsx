@@ -148,7 +148,7 @@ function App() {
               />
             </div>
 
-            <div className="small-rectangles">
+            <div className="small-rectangles other-rectangle">
               <div className="small-box">
                 <div className="small-img">
                   <img src="./roulette.png" alt="roulette" />
@@ -172,7 +172,7 @@ function App() {
               </div>
             </div>
 
-            <div className="dotcode-btn">
+            <div className="dotcode-btn other-btn">
               <button
                 onClick={
                   () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
@@ -196,10 +196,10 @@ function App() {
               <p>CSGOROLL</p>
             </div>
             <div className="first-rectangle">
-              <img className="roll-logo logo" src="./roll.svg" alt="roll" />
+              <img className="roll-logo" src="./roll.svg" alt="roll" />
             </div>
 
-            <div className="small-rectangles">
+            <div className="small-rectangles other-rectangle">
               <div className="small-box">
                 <div className="small-img">
                   <img src="./roulette.png" alt="roulette" />
@@ -222,7 +222,7 @@ function App() {
               </div>
             </div>
 
-            <div className="dotcode-btn">
+            <div className="dotcode-btn other-btn">
               <button
                 onClick={
                   () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
@@ -253,9 +253,9 @@ function App() {
               />
             </div>
 
-            <div className="small-rectangles"></div>
+            <div className="small-rectangles other-rectangle"></div>
 
-            <div className="dotcode-btn right-btn">
+            <div className="dotcode-btn other-btn">
               <button
                 onClick={
                   () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
@@ -282,9 +282,9 @@ function App() {
               <img className="daddy-logo logo" src="./daddy3.png" alt="daddy" />
             </div>
 
-            <div className="small-rectangles"></div>
+            <div className="small-rectangles other-rectangle"></div>
 
-            <div className="dotcode-btn right-btn">
+            <div className="dotcode-btn other-btn">
               <button
                 onClick={
                   () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
@@ -315,7 +315,7 @@ function App() {
               <img className="logo" src="./ADD LOGO HERE" alt="logo" />
             </div>
 
-            <div className="small-rectangles">
+            <div className="small-rectangles other-rectangle">
               <div className="small-box">
                 <div className="small-img">
                   <img src="./roulette.png" alt="roulette" />
@@ -368,7 +368,7 @@ function App() {
               <img className="logo" src="./ADD LOGO HERE" alt="logo" />
             </div>
 
-            <div className="small-rectangles">
+            <div className="small-rectangles other-rectangle">
               <div className="small-box">
                 <div className="small-img">
                   <img src="./roulette.png" alt="roulette" />
@@ -421,7 +421,7 @@ function App() {
               <img className="logo" src="./ADD LOGO HERE" alt="logo" />
             </div>
 
-            <div className="small-rectangles">
+            <div className="small-rectangles other-rectangle">
               <div className="small-box">
                 <div className="small-img">
                   <img src="./roulette.png" alt="roulette" />
@@ -474,7 +474,7 @@ function App() {
               <img className="logo" src="./ADD LOGO HERE" alt="logo" />
             </div>
 
-            <div className="small-rectangles">
+            <div className="small-rectangles other-rectangle">
               <div className="small-box">
                 <div className="small-img">
                   <img src="./roulette.png" alt="roulette" />
