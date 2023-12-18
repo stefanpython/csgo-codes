@@ -119,8 +119,16 @@ function App() {
         <hr className="right" />
       </div>
 
+      <div className="mid-container second-mid">
+        <hr className="left" />
+        <div className="all-sites">
+          <h1>ALL SITES</h1>
+        </div>
+        <hr className="right" />
+      </div>
+
       <div className="box-container">
-        {filteredBoxes("ROULETTE CRASH COINFLIP") && (
+        {filteredBoxes("ROULETTE CRASH COINFLIP CSGOEMPIRE") && (
           <div className="box">
             <div class="rectangle-container">
               <div class="rectangle">
@@ -176,7 +184,7 @@ function App() {
           </div>
         )}
 
-        {filteredBoxes("ROULETTE CRASH COINFLIP") && (
+        {filteredBoxes("ROULETTE CRASH COINFLIP ROLL") && (
           <div className="box">
             <div class="rectangle-container">
               <div class="rectangle">
@@ -226,7 +234,7 @@ function App() {
           </div>
         )}
 
-        {filteredBoxes("") && (
+        {filteredBoxes("HELLCASE") && (
           <div className="box">
             <div class="rectangle-container">
               <div class="rectangle">
@@ -259,7 +267,7 @@ function App() {
           </div>
         )}
 
-        {filteredBoxes("") && (
+        {filteredBoxes("DADDYSKINS") && (
           <div className="box">
             <div class="rectangle-container">
               <div class="rectangle">
@@ -277,6 +285,220 @@ function App() {
             <div className="small-rectangles"></div>
 
             <div className="dotcode-btn right-btn">
+              <button
+                onClick={
+                  () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
+                }
+              >
+                + CSGODOTCODE
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* The other 4 panels */}
+
+        {filteredBoxes("DADDYSKINS") && (
+          <div className="box other-box">
+            <div class="rectangle-container">
+              <div class="rectangle">
+                <p>$ HERE</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
+              </div>
+            </div>
+
+            <div className="right-title">
+              {/* CHANGE PANEL NAME HERE INSIDE <p> <p/> tags - (this is the name on the right top-side of panel)*/}
+              <p>PUT NAME HERE</p>
+            </div>
+            <div className="first-rectangle">
+              {/* CHANGE LOGO HERE inside src="./logoname.extension" eg: "src="./logo.svg"  */}
+              <img className="logo" src="./ADD LOGO HERE" alt="logo" />
+            </div>
+
+            <div className="small-rectangles">
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./roulette.png" alt="roulette" />
+                </div>
+
+                <h1>ROULETTE</h1>
+              </div>
+
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./crash.png" alt="crash" />
+                </div>
+                <h1>CRASH</h1>
+              </div>
+
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./coin.png" alt="coin" />
+                </div>
+                <h1>COINFLIP</h1>
+              </div>
+            </div>
+
+            <div className="dotcode-btn other-btn">
+              <button
+                onClick={
+                  () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
+                }
+              >
+                + CSGODOTCODE
+              </button>
+            </div>
+          </div>
+        )}
+
+        {filteredBoxes("DADDYSKINS") && (
+          <div className="box other-box">
+            <div class="rectangle-container">
+              <div class="rectangle">
+                <p>$ HERE</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
+              </div>
+            </div>
+
+            <div className="right-title">
+              {/* CHANGE PANEL NAME HERE INSIDE <p> <p/> tags - (this is the name on the right top-side of panel)*/}
+              <p>PUT NAME HERE</p>
+            </div>
+            <div className="first-rectangle">
+              {/* CHANGE LOGO HERE inside src="./logoname.extension" eg: "src="./logo.svg"  */}
+              <img className="logo" src="./ADD LOGO HERE" alt="logo" />
+            </div>
+
+            <div className="small-rectangles">
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./roulette.png" alt="roulette" />
+                </div>
+
+                <h1>ROULETTE</h1>
+              </div>
+
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./crash.png" alt="crash" />
+                </div>
+                <h1>CRASH</h1>
+              </div>
+
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./coin.png" alt="coin" />
+                </div>
+                <h1>COINFLIP</h1>
+              </div>
+            </div>
+
+            <div className="dotcode-btn other-btn">
+              <button
+                onClick={
+                  () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
+                }
+              >
+                + CSGODOTCODE
+              </button>
+            </div>
+          </div>
+        )}
+
+        {filteredBoxes("DADDYSKINS") && (
+          <div className="box other-box">
+            <div class="rectangle-container">
+              <div class="rectangle">
+                <p>$ HERE</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
+              </div>
+            </div>
+
+            <div className="right-title">
+              {/* CHANGE PANEL NAME HERE INSIDE <p> <p/> tags - (this is the name on the right top-side of panel)*/}
+              <p>PUT NAME HERE</p>
+            </div>
+            <div className="first-rectangle">
+              {/* CHANGE LOGO HERE inside src="./logoname.extension" eg: "src="./logo.svg"  */}
+              <img className="logo" src="./ADD LOGO HERE" alt="logo" />
+            </div>
+
+            <div className="small-rectangles">
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./roulette.png" alt="roulette" />
+                </div>
+
+                <h1>ROULETTE</h1>
+              </div>
+
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./crash.png" alt="crash" />
+                </div>
+                <h1>CRASH</h1>
+              </div>
+
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./coin.png" alt="coin" />
+                </div>
+                <h1>COINFLIP</h1>
+              </div>
+            </div>
+
+            <div className="dotcode-btn other-btn">
+              <button
+                onClick={
+                  () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
+                }
+              >
+                + CSGODOTCODE
+              </button>
+            </div>
+          </div>
+        )}
+
+        {filteredBoxes("DADDYSKINS") && (
+          <div className="box other-box">
+            <div class="rectangle-container">
+              <div class="rectangle">
+                <p>$ HERE</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
+              </div>
+            </div>
+
+            <div className="right-title">
+              {/* CHANGE PANEL NAME HERE INSIDE <p> <p/> tags - (this is the name on the right top-side of panel)*/}
+              <p>PUT NAME HERE</p>
+            </div>
+            <div className="first-rectangle">
+              {/* CHANGE LOGO HERE inside src="./logoname.extension" eg: "src="./logo.svg"  */}
+              <img className="logo" src="./ADD LOGO HERE" alt="logo" />
+            </div>
+
+            <div className="small-rectangles">
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./roulette.png" alt="roulette" />
+                </div>
+
+                <h1>ROULETTE</h1>
+              </div>
+
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./crash.png" alt="crash" />
+                </div>
+                <h1>CRASH</h1>
+              </div>
+
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./coin.png" alt="coin" />
+                </div>
+                <h1>COINFLIP</h1>
+              </div>
+            </div>
+
+            <div className="dotcode-btn other-btn">
               <button
                 onClick={
                   () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix

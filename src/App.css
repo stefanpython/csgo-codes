@@ -74,7 +74,20 @@
 
 .star-icon {
   height: 60px;
-  margin-left: 18px;
+  margin-left: 13px;
+}
+
+.second-mid {
+  margin-top: -40px;
+}
+
+.all-sites {
+  padding-right: 25px;
+  margin-left: 35px;
+}
+
+.all-sites h1 {
+  margin-left: -10px;
 }
 
 /* Box style */
@@ -242,4 +255,14 @@
 .filter-search {
   margin-bottom: 100px;
   margin-top: -70px;
+}
+
+/* Other box style  */
+
+.other-box {
+  max-height: 340px;
+}
+
+.other-btn {
+  margin-top: 15px;
 }
