@@ -242,6 +242,7 @@ function App() {
 
         filteredBoxes("ROULETTE CRASH HELLCASE")
         */}
+
         {filteredBoxes("HELLCASE") && (
           <div className="box">
             <div class="rectangle-container">
@@ -519,8 +520,10 @@ function App() {
             </div>
 
             <div className="small-rectangles other-rectangle">
+              {/* SMALL-BOX INSIDE THIS CONTAINER WHICH STARS HERE */}
+
               {/* 
-              TO ADD, REMOVE ROULETTE, CRASH, COINFLIP, YOU CAN REMOVE
+              TO ADD OR REMOVE ANY OF THE BOXES WITH ROULETTE, CRASH, COINFLIP, YOU CAN REMOVE
               ANY OR ALL OF THE div className="small-box" from start to end:
                */}
 
@@ -551,6 +554,9 @@ function App() {
                 <h1>COINFLIP</h1>
               </div>
               {/* END */}
+
+              {/* CONTAINER ENDS HERE. PUT ROULETTE, COINFLIP OR CRASH INSIDE 
+              THIS CONTAINER, AS YOU SEE ABOVE  */}
             </div>
 
             <div className="dotcode-btn other-btn">
