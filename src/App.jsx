@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import "./Responsievness.css";
 import "./Dropdown.css";
+import InfoPanel from "./InfoPanel";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
@@ -52,6 +53,8 @@ function App() {
 
   return (
     <div className="app">
+      <InfoPanel />
+
       <div className="title-container">
         <img className="title" src="./title.png" alt="title" />
       </div>
@@ -254,6 +257,7 @@ function App() {
             <div className="right-title">
               <p>HELLCASE</p>
             </div>
+
             <div className="first-rectangle">
               <img
                 className="hell-logo logo"
