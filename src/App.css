@@ -142,7 +142,7 @@
 
 /* First part of each box style  */
 
-.right-title {
+/* .right-title {
   display: flex;
   justify-content: flex-end;
   margin-right: 10px;
@@ -153,6 +153,39 @@
 .right-title p {
   font-size: 18px;
   font-weight: 900;
+} */
+
+.right-title {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  margin-top: -70px;
+  margin-bottom: -75px;
+  flex-direction: column;
+}
+
+.right-title p {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* Info icon */
+
+.info-img {
+  max-height: 30px;
+  max-width: 30px;
+  background-color: #e2e2e2;
+  border-radius: 20px;
+}
+
+.info-div,
+.box-title {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.info-div {
+  margin-top: -10px;
 }
 
 /* $ 0.50 rectangle style */
@@ -285,14 +318,13 @@
 
 /* Other box style  */
 
-.other-box {
-  max-height: 340px;
-}
-
 .other-btn {
   margin-top: 15px;
 }
 
 .other-rectangle {
   height: 85px;
+}
+
+.infopanel {
 }

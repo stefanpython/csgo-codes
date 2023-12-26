@@ -8,6 +8,29 @@ function App() {
   const [searchInput, setSearchInput] = useState("");
   const [selectedOption, setSelectedOption] = useState(null);
 
+  const [isHovered, setIsHovered] = useState(false);
+  const [isInfoVisible, setIsInfoVisible] = useState(true);
+
+  const handleInfoHover = () => {
+    setIsHovered(true);
+    setIsInfoVisible(true);
+  };
+
+  const handlePanelHover = () => {
+    setIsHovered(true);
+  };
+
+  const handlePanelLeave = () => {
+    setIsHovered(false);
+    setIsInfoVisible(false);
+  };
+
+  // Handle closing the InfoPanel
+  const handleCloseInfoPanel = () => {
+    setIsHovered(false);
+    setIsInfoVisible(false);
+  };
+
   // Handles button redirect
   const handleButtonClick = (url) => {
     window.location.href = url;
@@ -51,9 +74,90 @@ function App() {
     }
   };
 
+  let box1 = {
+    img: "./empire.svg",
+    name: "CSGOEmpire",
+    rating: 8.8,
+    code: "Jofa",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
+  };
+
+  let box2 = {
+    img: "./roll.svg",
+    name: "CSGORoll",
+    rating: 8.8,
+    code: "Jofa",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
+  };
+
+  let box3 = {
+    img: "./hellcase.svg",
+    name: "Hellcase",
+    rating: 8.8,
+    code: "Jofa",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
+  };
+
+  let box4 = {
+    img: "./daddy.png",
+    name: "DaddySkins",
+    rating: 8.8,
+    code: "Jofa",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
+  };
+
+  let box5 = {
+    img: "PUT ",
+    name: "PUT NAME HERE",
+    rating: "RATING HERE",
+    code: "CODE BUTTON HERE",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
+  };
+
+  let box6 = {
+    img: "./daddy.png",
+    name: "PUT NAME HERE",
+    rating: "RATING HERE",
+    code: "CODE BUTTON HERE",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
+  };
+
+  let box7 = {
+    img: "./daddy.png",
+    name: "PUT NAME HERE",
+    rating: "RATING HERE",
+    code: "CODE BUTTON HERE",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
+  };
+
+  let box8 = {
+    img: "./daddy.png",
+    name: "PUT NAME HERE",
+    rating: "RATING HERE",
+    code: "CODE BUTTON HERE",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
+  };
+
+  console.log(isInfoVisible);
   return (
     <div className="app">
-      <InfoPanel />
+      {isInfoVisible && (
+        <div className="infopanel">
+          <InfoPanel
+            onMouseEnter={handlePanelHover}
+            onMouseLeave={handlePanelLeave}
+            onClose={handleCloseInfoPanel}
+          />
+        </div>
+      )}
 
       <div className="title-container">
         <img className="title" src="./title.png" alt="title" />
@@ -135,22 +239,29 @@ function App() {
       <div className="box-container">
         {filteredBoxes("ROULETTE CRASH COINFLIP CSGOEMPIRE") && (
           <div className="box">
-            <div class="rectangle-container">
-              <div class="rectangle">
+            <div className="rectangle-container">
+              <div className="rectangle">
                 <p>$ 0.50</p>
               </div>
             </div>
 
             <div className="right-title">
-              <p>CSGOEMPIRE</p>
+              <div className="box-title">
+                <p>CSGOEMPIRE</p>
+              </div>
+
+              <div className="info-div">
+                <img
+                  className="info-img"
+                  src="./info.png"
+                  alt=""
+                  onMouseEnter={handleInfoHover}
+                />
+              </div>
             </div>
 
             <div className="first-rectangle">
-              <img
-                className="empire-logo logo"
-                src="./empire.svg"
-                alt="empire"
-              />
+              <img className="roll-logo" src="./empire.svg" alt="roll" />
             </div>
 
             <div className="small-rectangles other-rectangle">
@@ -158,7 +269,6 @@ function App() {
                 <div className="small-img">
                   <img src="./roulette.png" alt="roulette" />
                 </div>
-
                 <h1>ROULETTE</h1>
               </div>
 
@@ -191,15 +301,27 @@ function App() {
 
         {filteredBoxes("ROULETTE CRASH COINFLIP ROLL") && (
           <div className="box">
-            <div class="rectangle-container">
-              <div class="rectangle">
+            <div className="rectangle-container">
+              <div className="rectangle">
                 <p>$ 0.50</p>
               </div>
             </div>
 
             <div className="right-title">
-              <p>CSGOROLL</p>
+              <div className="box-title">
+                <p>CSGOROLL</p>
+              </div>
+
+              <div className="info-div">
+                <img
+                  className="info-img"
+                  src="./info.png"
+                  alt=""
+                  onMouseEnter={handleInfoHover}
+                />
+              </div>
             </div>
+
             <div className="first-rectangle">
               <img className="roll-logo" src="./roll.svg" alt="roll" />
             </div>
@@ -248,25 +370,53 @@ function App() {
 
         {filteredBoxes("HELLCASE") && (
           <div className="box">
-            <div class="rectangle-container">
-              <div class="rectangle">
+            <div className="rectangle-container">
+              <div className="rectangle">
                 <p>$ 0.50</p>
               </div>
             </div>
 
             <div className="right-title">
-              <p>HELLCASE</p>
+              <div className="box-title">
+                <p>HELLCASE</p>
+              </div>
+
+              <div className="info-div">
+                <img
+                  className="info-img"
+                  src="./info.png"
+                  alt=""
+                  onMouseEnter={handleInfoHover}
+                />
+              </div>
             </div>
 
             <div className="first-rectangle">
-              <img
-                className="hell-logo logo"
-                src="./hellcase.svg"
-                alt="hellcase"
-              />
+              <img className="roll-logo" src="./hellcase.svg" alt="roll" />
             </div>
 
-            <div className="small-rectangles other-rectangle"></div>
+            <div className="small-rectangles other-rectangle">
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./roulette.png" alt="roulette" />
+                </div>
+                <h1>ROULETTE</h1>
+              </div>
+
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./crash.png" alt="crash" />
+                </div>
+                <h1>CRASH</h1>
+              </div>
+
+              <div className="small-box">
+                <div className="small-img">
+                  <img src="./coin.png" alt="coin" />
+                </div>
+                <h1>COINFLIP</h1>
+              </div>
+            </div>
 
             <div className="dotcode-btn other-btn">
               <button
@@ -288,15 +438,27 @@ function App() {
         */}
         {filteredBoxes("DADDYSKINS") && (
           <div className="box">
-            <div class="rectangle-container">
-              <div class="rectangle">
+            <div className="rectangle-container">
+              <div className="rectangle">
                 <p>$ 0.50</p>
               </div>
             </div>
 
             <div className="right-title">
-              <p>DADDYSKINS</p>
+              <div className="box-title">
+                <p>DADDYSKINS</p>
+              </div>
+
+              <div className="info-div">
+                <img
+                  className="info-img"
+                  src="./info.png"
+                  alt=""
+                  onMouseEnter={handleInfoHover}
+                />
+              </div>
             </div>
+
             <div className="first-rectangle">
               <img className="daddy-logo logo" src="./daddy3.png" alt="daddy" />
             </div>
@@ -325,16 +487,28 @@ function App() {
         */}
         {filteredBoxes(">>> ADD ALL SEARCH NAMES HERE <<<") && (
           <div className="box other-box">
-            <div class="rectangle-container">
-              <div class="rectangle">
+            <div className="rectangle-container">
+              <div className="rectangle">
                 <p>$ COST</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
               </div>
             </div>
 
             <div className="right-title">
               {/* CHANGE PANEL NAME HERE INSIDE <p> <p/> tags - (this is the name on the right top-side of panel)*/}
-              <p>PUT NAME HERE</p>
+              <div className="box-title">
+                <p>PUT NAME HERE</p>
+              </div>
+
+              <div className="info-div">
+                <img
+                  className="info-img"
+                  src="./info.png"
+                  alt=""
+                  onMouseEnter={handleInfoHover}
+                />
+              </div>
             </div>
+
             <div className="first-rectangle">
               {/* CHANGE LOGO HERE inside src="./logoname.extension" eg: "src="./logo.svg"  */}
               <img className="logo" src="./ADD LOGO HERE" alt="logo" />
@@ -395,16 +569,28 @@ function App() {
         */}
         {filteredBoxes(">>> ADD ALL SEARCH NAMES HERE <<<") && (
           <div className="box other-box">
-            <div class="rectangle-container">
-              <div class="rectangle">
+            <div className="rectangle-container">
+              <div className="rectangle">
                 <p>$ COST</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
               </div>
             </div>
 
             <div className="right-title">
               {/* CHANGE PANEL NAME HERE INSIDE <p> <p/> tags - (this is the name on the right top-side of panel)*/}
-              <p>PUT NAME HERE</p>
+              <div className="box-title">
+                <p>PUT NAME HERE</p>
+              </div>
+
+              <div className="info-div">
+                <img
+                  className="info-img"
+                  src="./info.png"
+                  alt=""
+                  onMouseEnter={handleInfoHover}
+                />
+              </div>
             </div>
+
             <div className="first-rectangle">
               {/* CHANGE LOGO HERE inside src="./logoname.extension" eg: "src="./logo.svg"  */}
               <img className="logo" src="./ADD LOGO HERE" alt="logo" />
@@ -456,16 +642,28 @@ function App() {
         */}
         {filteredBoxes(">>> ADD ALL SEARCH NAMES HERE <<<") && (
           <div className="box other-box">
-            <div class="rectangle-container">
-              <div class="rectangle">
+            <div className="rectangle-container">
+              <div className="rectangle">
                 <p>$ COST</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
               </div>
             </div>
 
             <div className="right-title">
               {/* CHANGE PANEL NAME HERE INSIDE <p> <p/> tags - (this is the name on the right top-side of panel)*/}
-              <p>PUT NAME HERE</p>
+              <div className="box-title">
+                <p>PUT NAME HERE</p>
+              </div>
+
+              <div className="info-div">
+                <img
+                  className="info-img"
+                  src="./info.png"
+                  alt=""
+                  onMouseEnter={handleInfoHover}
+                />
+              </div>
             </div>
+
             <div className="first-rectangle">
               {/* CHANGE LOGO HERE inside src="./logoname.extension" eg: "src="./logo.svg"  */}
               <img className="logo" src="./ADD LOGO HERE" alt="logo" />
@@ -508,16 +706,28 @@ function App() {
         */}
         {filteredBoxes(">>> ADD ALL SEARCH NAMES HERE <<<") && (
           <div className="box other-box">
-            <div class="rectangle-container">
-              <div class="rectangle">
+            <div className="rectangle-container">
+              <div className="rectangle">
                 <p>$ COST</p> {/*CHANGE PANEL PRICE HERE INSIDE <p> <p/> tags*/}
               </div>
             </div>
 
             <div className="right-title">
               {/* CHANGE PANEL NAME HERE INSIDE <p> <p/> tags - (this is the name on the right top-side of panel)*/}
-              <p>PUT NAME HERE</p>
+              <div className="box-title">
+                <p>PUT NAME HERE</p>
+              </div>
+
+              <div className="info-div">
+                <img
+                  className="info-img"
+                  src="./info.png"
+                  alt=""
+                  onMouseEnter={handleInfoHover}
+                />
+              </div>
             </div>
+
             <div className="first-rectangle">
               {/* CHANGE LOGO HERE inside src="./logoname.extension" eg: "src="./logo.svg"  */}
               <img className="logo" src="./ADD LOGO HERE" alt="logo" />

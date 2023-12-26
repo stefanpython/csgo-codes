@@ -1,16 +1,25 @@
 import "./InfoPanel.css";
 import CopyToClipboard from "react-copy-to-clipboard";
 
-const InfoPanel = () => {
+const InfoPanel = ({ onMouseEnter, onMouseLeave, onClose }) => {
   // Handles button redirect
   const handleButtonClick = (url) => {
     window.location.href = url;
   };
 
-  // Handles copying code button
+  // Handles closing the InfoPanel
+  const handleClose = () => {
+    if (onClose) {
+      onClose();
+    }
+  };
 
   return (
-    <div className="info-box">
+    <div
+      className="info-box"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       <div className="title-right">
         {/* CHANGE PANEL NAME HERE INSIDE <p> <p/> tags - (this is the name on the right top-side of panel)*/}
         <p>CSGORoll</p>
@@ -170,6 +179,10 @@ const InfoPanel = () => {
             impedit voluptas nulla quibusdam rem.
           </h5>
         </div>
+      </div>
+
+      <div className="close-div" onClick={handleClose}>
+        <p>X</p>
       </div>
     </div>
   );
