@@ -326,5 +326,14 @@
   height: 85px;
 }
 
-.infopanel {
+.panels-info {
+  margin-left: 250px;
+  position: absolute;
+  margin-top: -1200px;
+}
+
+.other-panels {
+  margin-left: 270px;
+  position: absolute;
+  margin-top: -400px;
 }

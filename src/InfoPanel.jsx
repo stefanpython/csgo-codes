@@ -1,4 +1,5 @@
 import "./InfoPanel.css";
+import "./Responsievness.css";
 import CopyToClipboard from "react-copy-to-clipboard";
 
 const InfoPanel = ({ onMouseEnter, onMouseLeave, onClose, data }) => {
