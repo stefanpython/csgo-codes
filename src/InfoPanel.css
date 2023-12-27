@@ -1,6 +1,6 @@
 .info-box {
   background-color: #515055;
-  max-width: 71em;
+  max-width: 80em;
   max-height: 42em;
   border: 1px solid black;
   padding-right: 20px;
@@ -26,7 +26,6 @@
   justify-content: center;
   align-items: center;
   margin-top: -37px;
-  margin-left: 50px;
 }
 
 .rating-div {
@@ -144,4 +143,11 @@
 
 .close-div p {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.close {
+  font-size: 16px;
+  margin-right: 5px;
 }

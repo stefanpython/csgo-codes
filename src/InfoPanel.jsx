@@ -1,7 +1,7 @@
 import "./InfoPanel.css";
 import CopyToClipboard from "react-copy-to-clipboard";
 
-const InfoPanel = ({ onMouseEnter, onMouseLeave, onClose }) => {
+const InfoPanel = ({ onMouseEnter, onMouseLeave, onClose, data }) => {
   // Handles button redirect
   const handleButtonClick = (url) => {
     window.location.href = url;
@@ -22,16 +22,16 @@ const InfoPanel = ({ onMouseEnter, onMouseLeave, onClose }) => {
     >
       <div className="title-right">
         {/* CHANGE PANEL NAME HERE INSIDE <p> <p/> tags - (this is the name on the right top-side of panel)*/}
-        <p>CSGORoll</p>
+        <p>{data.name}</p>
       </div>
 
       <div className="header-container">
         <div className="logo-div">
-          <img className="logo-img" src="./roll.svg" alt="" />
+          <img className="logo-img" src={`${data.img}`} alt="" />
         </div>
 
         <div className="bonus-div">
-          <h1>5% BONUS ON DEPOSIT</h1>
+          <h1>{data.bonus}% BONUS ON DEPOSIT</h1>
         </div>
 
         <div className="rating-div">
@@ -40,7 +40,7 @@ const InfoPanel = ({ onMouseEnter, onMouseLeave, onClose }) => {
           </div>
 
           <div className="rating-box">
-            <h2>6.9</h2>
+            <h2>{data.rating}</h2>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@ const InfoPanel = ({ onMouseEnter, onMouseLeave, onClose }) => {
           {/* Implement copying code button */}
           <CopyToClipboard text="Jofa" onCopy={() => alert("Copied!")}>
             {/* Put in here between button tags what you want to be copied, eg here is Jofa, <button>HERE</button> */}
-            <button>Jofa</button>
+            <button>{data.code}</button>
           </CopyToClipboard>
 
           <div className="clipboard">
@@ -172,17 +172,14 @@ const InfoPanel = ({ onMouseEnter, onMouseLeave, onClose }) => {
         <div className="right-box">
           <h3>Description </h3>
 
-          <h5>
-            Corporis minus culpa ipsam et adipisci. Dicta asperiores excepturi
-            omnis sunt. Magni repellendus nihil quis aliquam nemo consequatur
-            quod velit. Placeat ullam ut voluptatem. Consequatur doloribus
-            impedit voluptas nulla quibusdam rem.
-          </h5>
+          <h5>{data.description}</h5>
         </div>
       </div>
 
       <div className="close-div" onClick={handleClose}>
-        <p>X</p>
+        <p>
+          <span className="close">close </span> X
+        </p>
       </div>
     </div>
   );

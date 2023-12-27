@@ -11,6 +11,65 @@ function App() {
   const [isHovered, setIsHovered] = useState(false);
   const [isInfoVisible, setIsInfoVisible] = useState(true);
 
+  const [isInfoVisibleBox1, setIsInfoVisibleBox1] = useState(false);
+  const [isInfoVisibleBox2, setIsInfoVisibleBox2] = useState(false);
+  const [isInfoVisibleBox3, setIsInfoVisibleBox3] = useState(false);
+  const [isInfoVisibleBox4, setIsInfoVisibleBox4] = useState(false);
+  const [isInfoVisibleBox5, setIsInfoVisibleBox5] = useState(false);
+  const [isInfoVisibleBox6, setIsInfoVisibleBox6] = useState(false);
+  const [isInfoVisibleBox7, setIsInfoVisibleBox7] = useState(false);
+  const [isInfoVisibleBox8, setIsInfoVisibleBox8] = useState(false);
+
+  const handleInfoHoverBox1 = () => {
+    setIsHovered(true);
+    setIsInfoVisible(true);
+    setIsInfoVisibleBox1(true);
+  };
+
+  const handleInfoHoverBox2 = () => {
+    setIsHovered(true);
+    setIsInfoVisible(true);
+    setIsInfoVisibleBox2(true);
+  };
+
+  const handleInfoHoverBox3 = () => {
+    setIsHovered(true);
+    setIsInfoVisible(true);
+    setIsInfoVisibleBox3(true);
+  };
+
+  const handleInfoHoverBox4 = () => {
+    setIsHovered(true);
+    setIsInfoVisible(true);
+    setIsInfoVisibleBox4(true);
+  };
+
+  const handleInfoHoverBox5 = () => {
+    setIsHovered(true);
+    setIsInfoVisible(true);
+    setIsInfoVisibleBox5(true);
+  };
+
+  const handleInfoHoverBox6 = () => {
+    setIsHovered(true);
+    setIsInfoVisible(true);
+    setIsInfoVisibleBox6(true);
+  };
+
+  const handleInfoHoverBox7 = () => {
+    setIsHovered(true);
+    setIsInfoVisible(true);
+    setIsInfoVisibleBox7(true);
+  };
+
+  const handleInfoHoverBox8 = () => {
+    setIsHovered(true);
+    setIsInfoVisible(true);
+    setIsInfoVisibleBox8(true);
+  };
+
+  // ------------ Boxes end ------------
+
   const handleInfoHover = () => {
     setIsHovered(true);
     setIsInfoVisible(true);
@@ -23,13 +82,17 @@ function App() {
   const handlePanelLeave = () => {
     setIsHovered(false);
     setIsInfoVisible(false);
+    setIsInfoVisibleBox1(false);
+    setIsInfoVisibleBox2(false);
+    setIsInfoVisibleBox3(false);
+    setIsInfoVisibleBox4(false);
+    setIsInfoVisibleBox5(false);
+    setIsInfoVisibleBox6(false);
+    setIsInfoVisibleBox7(false);
+    setIsInfoVisibleBox8(false);
   };
 
-  // Handle closing the InfoPanel
-  const handleCloseInfoPanel = () => {
-    setIsHovered(false);
-    setIsInfoVisible(false);
-  };
+  // -------------------------------------------
 
   // Handles button redirect
   const handleButtonClick = (url) => {
@@ -77,8 +140,9 @@ function App() {
   let box1 = {
     img: "./empire.svg",
     name: "CSGOEmpire",
-    rating: 8.8,
+    rating: 6.9,
     code: "Jofa",
+    bonus: 6,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
   };
@@ -88,6 +152,7 @@ function App() {
     name: "CSGORoll",
     rating: 8.8,
     code: "Jofa",
+    bonus: 7,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
   };
@@ -95,69 +160,110 @@ function App() {
   let box3 = {
     img: "./hellcase.svg",
     name: "Hellcase",
-    rating: 8.8,
+    rating: 7.2,
     code: "Jofa",
+    bonus: 8,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
   };
 
   let box4 = {
-    img: "./daddy.png",
+    img: "./daddy3.png",
     name: "DaddySkins",
-    rating: 8.8,
+    rating: 5.8,
     code: "Jofa",
+    bonus: 5,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
   };
 
   let box5 = {
-    img: "PUT ",
+    img: "IMAGE PATH",
     name: "PUT NAME HERE",
     rating: "RATING HERE",
     code: "CODE BUTTON HERE",
+    bonus: "BONUS HERE",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
   };
 
   let box6 = {
-    img: "./daddy.png",
+    img: "IMAGE PATH",
     name: "PUT NAME HERE",
     rating: "RATING HERE",
     code: "CODE BUTTON HERE",
+    bonus: "BONUS HERE",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
   };
 
   let box7 = {
-    img: "./daddy.png",
-    name: "PUT NAME HERE",
-    rating: "RATING HERE",
+    img: "IMAGE PATH",
+    name: "NAME RIGHT",
+    rating: "RATING",
     code: "CODE BUTTON HERE",
+    bonus: "BONUS HERE",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
   };
 
   let box8 = {
-    img: "./daddy.png",
+    img: "IMAGE PATH",
     name: "PUT NAME HERE",
     rating: "RATING HERE",
     code: "CODE BUTTON HERE",
+    bonus: "BONUS HERE",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. ",
   };
 
-  console.log(isInfoVisible);
   return (
     <div className="app">
-      {isInfoVisible && (
-        <div className="infopanel">
-          <InfoPanel
-            onMouseEnter={handlePanelHover}
-            onMouseLeave={handlePanelLeave}
-            onClose={handleCloseInfoPanel}
-          />
-        </div>
-      )}
+      <div className="panels-info">
+        {isInfoVisibleBox1 && (
+          <div className="infopanel">
+            <InfoPanel
+              onMouseEnter={handlePanelHover}
+              onMouseLeave={handlePanelLeave}
+              onClose={() => setIsInfoVisibleBox1(false)}
+              data={box1}
+            />
+          </div>
+        )}
+
+        {isInfoVisibleBox2 && (
+          <div className="infopanel">
+            <InfoPanel
+              onMouseEnter={handlePanelHover}
+              onMouseLeave={handlePanelLeave}
+              onClose={() => setIsInfoVisibleBox2(false)}
+              data={box2}
+            />
+          </div>
+        )}
+
+        {isInfoVisibleBox3 && (
+          <div className="infopanel">
+            <InfoPanel
+              onMouseEnter={handlePanelHover}
+              onMouseLeave={handlePanelLeave}
+              onClose={() => setIsInfoVisibleBox3(false)}
+              data={box3}
+            />
+          </div>
+        )}
+
+        {isInfoVisibleBox4 && (
+          <div className="infopanel">
+            <InfoPanel
+              onMouseEnter={handlePanelHover}
+              onMouseLeave={handlePanelLeave}
+              onClose={() => setIsInfoVisibleBox4(false)}
+              data={box4}
+            />
+          </div>
+        )}
+      </div>
 
       <div className="title-container">
         <img className="title" src="./title.png" alt="title" />
@@ -255,7 +361,7 @@ function App() {
                   className="info-img"
                   src="./info.png"
                   alt=""
-                  onMouseEnter={handleInfoHover}
+                  onMouseEnter={handleInfoHoverBox1}
                 />
               </div>
             </div>
@@ -317,7 +423,7 @@ function App() {
                   className="info-img"
                   src="./info.png"
                   alt=""
-                  onMouseEnter={handleInfoHover}
+                  onMouseEnter={handleInfoHoverBox2}
                 />
               </div>
             </div>
@@ -386,7 +492,7 @@ function App() {
                   className="info-img"
                   src="./info.png"
                   alt=""
-                  onMouseEnter={handleInfoHover}
+                  onMouseEnter={handleInfoHoverBox3}
                 />
               </div>
             </div>
@@ -454,7 +560,7 @@ function App() {
                   className="info-img"
                   src="./info.png"
                   alt=""
-                  onMouseEnter={handleInfoHover}
+                  onMouseEnter={handleInfoHoverBox4}
                 />
               </div>
             </div>
@@ -485,6 +591,7 @@ function App() {
 
         filteredBoxes("ROULETTE CRASH HELLCASE")
         */}
+
         {filteredBoxes(">>> ADD ALL SEARCH NAMES HERE <<<") && (
           <div className="box other-box">
             <div className="rectangle-container">
@@ -504,9 +611,55 @@ function App() {
                   className="info-img"
                   src="./info.png"
                   alt=""
-                  onMouseEnter={handleInfoHover}
+                  onMouseEnter={handleInfoHoverBox5}
                 />
               </div>
+            </div>
+
+            <div className="other-panels">
+              {isInfoVisibleBox5 && (
+                <div className="infopanel">
+                  <InfoPanel
+                    onMouseEnter={handlePanelHover}
+                    onMouseLeave={handlePanelLeave}
+                    onClose={() => setIsInfoVisibleBox5(false)}
+                    data={box5}
+                  />
+                </div>
+              )}
+
+              {isInfoVisibleBox6 && (
+                <div className="infopanel">
+                  <InfoPanel
+                    onMouseEnter={handlePanelHover}
+                    onMouseLeave={handlePanelLeave}
+                    onClose={() => setIsInfoVisibleBox6(false)}
+                    data={box6}
+                  />
+                </div>
+              )}
+
+              {isInfoVisibleBox7 && (
+                <div className="infopanel">
+                  <InfoPanel
+                    onMouseEnter={handlePanelHover}
+                    onMouseLeave={handlePanelLeave}
+                    onClose={() => setIsInfoVisibleBox7(false)}
+                    data={box7}
+                  />
+                </div>
+              )}
+
+              {isInfoVisibleBox8 && (
+                <div className="infopanel">
+                  <InfoPanel
+                    onMouseEnter={handlePanelHover}
+                    onMouseLeave={handlePanelLeave}
+                    onClose={() => setIsInfoVisibleBox8(false)}
+                    data={box8}
+                  />
+                </div>
+              )}
             </div>
 
             <div className="first-rectangle">
@@ -586,7 +739,7 @@ function App() {
                   className="info-img"
                   src="./info.png"
                   alt=""
-                  onMouseEnter={handleInfoHover}
+                  onMouseEnter={handleInfoHoverBox6}
                 />
               </div>
             </div>
@@ -659,7 +812,7 @@ function App() {
                   className="info-img"
                   src="./info.png"
                   alt=""
-                  onMouseEnter={handleInfoHover}
+                  onMouseEnter={handleInfoHoverBox7}
                 />
               </div>
             </div>
@@ -723,7 +876,7 @@ function App() {
                   className="info-img"
                   src="./info.png"
                   alt=""
-                  onMouseEnter={handleInfoHover}
+                  onMouseEnter={handleInfoHoverBox8}
                 />
               </div>
             </div>
