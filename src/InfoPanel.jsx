@@ -22,7 +22,6 @@ const InfoPanel = ({ onMouseEnter, onMouseLeave, onClose, data }) => {
       onMouseLeave={onMouseLeave}
     >
       <div className="title-right">
-        {/* CHANGE PANEL NAME HERE INSIDE <p> <p/> tags - (this is the name on the right top-side of panel)*/}
         <p>{data.name}</p>
       </div>
 
@@ -55,7 +54,7 @@ const InfoPanel = ({ onMouseEnter, onMouseLeave, onClose, data }) => {
           <div className="buttons-grid">
             <button
               onClick={
-                () => handleButtonClick("ADD WEBSITE LINK HERE INSIDE QUOTES") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
+                () => handleButtonClick("http://www.google.com") // ADD WEBSITE LINK HERE eg: http://www.google.com - make sure it has http:// or https:// prefix
               }
             >
               <img className="" src="./buttons/bitcoin.png" alt="" />
